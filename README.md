@@ -15,12 +15,15 @@ A set of helpers for baking your Django site out as flat files
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/django-bakery-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/django-bakery-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/django-bakery-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/django-bakery-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-bakery/badges/version.svg)](https://anaconda.org/conda-forge/django-bakery)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-bakery/badges/downloads.svg)](https://anaconda.org/conda-forge/django-bakery)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-django--bakery-green.svg)](https://anaconda.org/conda-forge/django-bakery) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/django-bakery.svg)](https://anaconda.org/conda-forge/django-bakery) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/django-bakery.svg)](https://anaconda.org/conda-forge/django-bakery) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/django-bakery.svg)](https://anaconda.org/conda-forge/django-bakery) |
 
 Installing django-bakery
 ========================
