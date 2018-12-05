@@ -1,6 +1,6 @@
 {% set name = "django-bakery" %}
-{% set version = "0.12.6" %}
-{% set sha256 = "99845672254473e3d1d9d02d58929bb38325feb4ec59291b930468ca79ae193c" %}
+{% set version = "0.12.7" %}
+{% set sha256 = "48156dbd9ddb762bef4352350a5f43744740529148fd70598120d8d2ae5e273c" %}
 
 package:
   name: {{ name|lower }}
