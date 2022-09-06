@@ -1,6 +1,6 @@
 {% set name = "django-bakery" %}
-{% set version = "0.12.7" %}
-{% set sha256 = "48156dbd9ddb762bef4352350a5f43744740529148fd70598120d8d2ae5e273c" %}
+{% set version = "0.13.1" %}
+{% set sha256 = "b0953de5e34b195b54cdb1d4fabb27b82be7d86b91885090dd4e4c2914a3b435" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
@@ -25,7 +25,7 @@ requirements:
     - django
     - six >1.5.2
     - boto3 >=1.4.4
-    
+
 test:
   imports:
     - bakery
@@ -34,8 +34,8 @@ about:
   home: https://github.com/datadesk/django-bakery
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'A set of helpers for baking your Django site out as flat files'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: A set of helpers for baking your Django site out as flat files
   description: |
     A set of helpers for baking your Django site out as flat files
   doc_url: https://django-bakery.readthedocs.io/en/latest/
