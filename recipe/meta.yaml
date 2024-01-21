@@ -1,37 +1,41 @@
 {% set name = "django-bakery" %}
-{% set version = "0.12.7" %}
-{% set sha256 = "48156dbd9ddb762bef4352350a5f43744740529148fd70598120d8d2ae5e273c" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-bakery-{{ version }}.tar.gz
+  sha256: 10e32f7fd312f5a98e927fb73b5fbcef749892be88a80434d4b7aa985e0b7507
 
 build:
-  number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.8
+    - setuptools-scm
+    - pip
   run:
-    - python
-    - django
+    - python >=3.8
+    - django >=4.2
     - six >1.5.2
     - boto3 >=1.4.4
-    
+    - fs >=2.0.17
+
 test:
   imports:
     - bakery
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/datadesk/django-bakery
+  home: http://www.github.com/palewire/django-bakery/
   license: MIT
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
@@ -44,4 +48,5 @@ about:
 extra:
   recipe-maintainers:
     - cshaley
+    - rxm7706
     - sannykr
