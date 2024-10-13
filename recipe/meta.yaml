@@ -1,13 +1,13 @@
 {% set name = "django-bakery" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-bakery-{{ version }}.tar.gz
-  sha256: 10e32f7fd312f5a98e927fb73b5fbcef749892be88a80434d4b7aa985e0b7507
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: cf63dabcf8cf16fbda48629a3c2fe4dc635f2549d6f32d9864dc503ed309c08b
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
     - python >=3.8
     - setuptools-scm
     - pip
+    - setuptools
   run:
     - python >=3.8
     - django >=4.2
