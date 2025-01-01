@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_bakery-{{ version }}.tar.gz
   sha256: cf63dabcf8cf16fbda48629a3c2fe4dc635f2549d6f32d9864dc503ed309c08b
 
 build:
