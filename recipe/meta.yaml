@@ -1,13 +1,13 @@
 {% set name = "django-bakery" %}
-{% set version = "0.13.5" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_bakery-{{ version }}.tar.gz
-  sha256: 282962fea713e17564d16b5a56e291638e3a231f84edb53df8bf2f99121ba935
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/django_bakery-{{ version }}.tar.gz
+  sha256: ae4c5abeeba15a8156365f005f4c63a691cdd8cceb142c4c912926f1936657f4
 
 build:
   noarch: python
@@ -21,8 +21,10 @@ requirements:
     - pip
     - setuptools
   run:
+    - botocore >=1.4.4
+    - fsspec >=2026.7.0
     - python >={{ python_min }}
-    - django >=4.2
+    - django >=5.2,<6.2
     - six >1.5.2
     - boto3 >=1.4.4
     - fs >=2.0.17
